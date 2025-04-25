@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  
+  /* Custom colors for the product cards */
+  --primary: rgba(255, 255, 255, 0.9);
+  --secondary: rgba(255, 255, 255, 0.7);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-black text-white;
+  }
+
+  .search-input {
+    @apply px-4 py-2;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .search-input:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .search-button {
+    @apply transition-colors;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .search-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-sm opacity-80 hover:opacity-100 transition-opacity font-medium;
+  }
+  
+  .button {
+    @apply px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border;
+  }
+  
+  .button-primary {
+    @apply bg-white text-black border-white hover:bg-transparent hover:text-white;
+  }
+  
+  .button-secondary {
+    @apply bg-transparent text-white border-white/30 hover:border-white/60;
+  }
+  
+  .search-input {
+    @apply w-full px-6 py-3 bg-black/30 border border-white/10 rounded-full pr-14 outline-none focus:border-white/30 transition-all backdrop-blur-sm;
+  }
+  
+  .search-button {
+    @apply absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/5 hover:bg-white/10 transition-all;
+  }
+  
+  .text-secondary {
+    @apply text-white/70;
+  }
+  
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  
+  .border-border {
+    border-color: var(--border);
+  }
+  
+  .border-primary\/10 {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .size-2 {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+/* Particle Canvas Styles */
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .blur {
+    backdrop-filter: blur(120px);
+  }
+}
+
+/* Font face for Rondana Bold */
+@font-face {
+  font-family: 'Rondana Bold';
+  src: url('/fonts/RondanaBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Add this to your existing CSS */
+.font-debug {
+  font-family: var(--font-rondana-bold);
+}
+
+/* You can also add a direct @font-face rule as a fallback */
+@font-face {
+  font-family: 'Rondana Bold';
+  src: url('/fonts/Rondana-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
