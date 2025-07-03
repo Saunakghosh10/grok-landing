@@ -7,10 +7,11 @@
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
   
-  /* Custom colors for the product cards */
+  /* Custom colors */
   --primary: rgba(255, 255, 255, 0.9);
   --secondary: rgba(255, 255, 255, 0.7);
   --border: rgba(255, 255, 255, 0.1);
+  --background: #000;
 }
 
 body {
@@ -97,6 +98,10 @@ body {
   .size-2 {
     width: 0.5rem;
     height: 0.5rem;
+  }
+
+  .mono-tag {
+    @apply font-mono uppercase tracking-widest;
   }
 }
 

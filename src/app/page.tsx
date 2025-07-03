@@ -3,6 +3,10 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Products from '@/components/sections/Products';
+import Features from '@/components/sections/Features';
+import Subscription from '@/components/sections/Subscription';
+import Platforms from '@/components/sections/Platforms';
+import Games from '@/components/sections/Games';
 import GlowEffect from '@/components/effects/GlowEffect';
 
 export const metadata: Metadata = {
@@ -18,11 +22,25 @@ export default function Home() {
         <GlowEffect />
         <Header />
         <Hero />
-        <Footer />
       </div>
 
       {/* Products section */}
       <Products />
+
+      {/* Features section */}
+      <Features />
+
+      {/* Subscription section */}
+      <Subscription />
+
+      {/* Platforms section */}
+      <Platforms />
+
+      {/* Games section */}
+      <Games />
+
+      {/* Footer section */}
+      <Footer />
     </div>
   );
 }

@@ -35,16 +35,16 @@ export default function ParticlesCanvas() {
     // Initialize particles
     const initParticles = () => {
       particles.current = [];
-      const particleCount = Math.floor(canvas.width * canvas.height / 25000); // Reduced density
+      const particleCount = Math.floor(canvas.width * canvas.height / 15000); // Increased density
       
       for (let i = 0; i < particleCount; i++) {
         particles.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: Math.random() * 1 + 0.2, // Smaller size between 0.2 and 1.2
-          speedX: (Math.random() - 0.5) * 0.2, // Slower speed
-          speedY: (Math.random() - 0.5) * 0.2, // Slower speed
-          opacity: Math.random() * 0.3 + 0.05 // Lower opacity between 0.05 and 0.35
+          size: Math.random() * 1 + 0.2, // Size between 0.2 and 1.2
+          speedX: (Math.random() - 0.5) * 0.8, // Increased speed
+          speedY: (Math.random() - 0.5) * 0.8, // Increased speed
+          opacity: Math.random() * 0.3 + 0.05 // Opacity between 0.05 and 0.35
         });
       }
     };
